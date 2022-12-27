@@ -1,0 +1,27 @@
+@import "variables.css";
+footer {
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  padding: 0px 100px;
+  min-height: 20vh;
+  border-top: 1px solid lightgrey;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  font-family: var(--titleFont);
+}
+footer ul li i {
+  cursor: pointer;
+}
+footer ul li {
+  margin-right: 6px;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer ul li span {
+  font-size: 2em;
+}
