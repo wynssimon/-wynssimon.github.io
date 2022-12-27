@@ -5,12 +5,12 @@ header {
   background-color: white;
   flex-direction: row;
   padding: 0px 100px;
-  min-height: 40vh;
+  min-height: 10vh;
   border-bottom: 1px solid lightgrey;
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  position: fixed;
+  position: relative;
   font-family: var(--titleFont);
 }
 header div {
@@ -26,7 +26,7 @@ header ul {
   float: right;
 }
 header ul li {
-  margin: 0 15px 0 0;
+  margin: 0 var(--standaardMarge) 0 0;
 }
 header ul li a {
   text-decoration: none;

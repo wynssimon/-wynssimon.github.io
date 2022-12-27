@@ -1,4 +1,54 @@
+@import "variables.css";
+
 body {
   background-color: #f1f1f5;
   margin: 0;
+  font-family: var(--textFont);
 }
+main {
+  text-align: center;
+  padding: 100px;
+}
+/*bio*/
+main #bio div img {
+  width: 20rem;
+  margin: auto;
+}
+main #bio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main #bio div:nth-child(1) {
+  width: 40%;
+}
+main #bio #uitleg {
+  width: 60%;
+  align-items: center;
+  display: flex;
+}
+main #bio p {
+  text-align: left;
+  line-height: 2rem;
+  font-size: var(--textSize);
+}
+/*einde bio*/
+/*contact*/
+main #contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: var(--textSize);
+  margin-top: var(--standaardMarge);
+}
+main #contact div {
+  width: 50%;
+}
+main #gegevens {
+  text-align: left;
+}
+#gegevens div {
+  margin: auto;
+  margin: auto auto var(--standaardMarge) auto;
+}
+/*einde contact*/
