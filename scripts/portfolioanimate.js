@@ -1,8 +1,9 @@
 window.onload = () => {
-  function1();
-  function2();
+  portfolioslide();
+  headerSlide();
+  showHidePortfolio();
 };
-function function1() {
+function portfolioslide() {
   const portfolioItems = document.querySelector("#portfolioItems");
 
   portfolioItems.style.top = "0";

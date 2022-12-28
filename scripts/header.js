@@ -1,4 +1,4 @@
-function function2() {
+function headerSlide() {
   const header = document.querySelector("header");
 
   window.addEventListener("scroll", () => {

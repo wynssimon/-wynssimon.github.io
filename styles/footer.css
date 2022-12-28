@@ -13,9 +13,7 @@ footer {
   line-height: 2rem;
   color: var(--color1);
 }
-footer div:nth-child(2) {
-  text-transform: uppercase;
-}
+
 footer ul li i {
   cursor: pointer;
 }

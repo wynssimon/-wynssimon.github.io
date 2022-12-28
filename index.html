@@ -40,17 +40,17 @@
             <span>Grafische & Gigitale Media</span>
             aan de AP Hogeschool te Antwerpen. Ik verwacht af te studeren in
             juni 2023. Tijdens mijn opleiding heb ik geproefd van alle
-            vakgebieden als branding, publication, motion en aldus ook
+            vakgebieden zoals branding, publication, motion en aldus ook
             interfaces. Daardoor heb ik nu een stevige basis van al deze zaken.
             Sinds januari 2022 heb ik besloten me volledig te richten op
             interface en sinds september enkel nog op coding. Hier wil ik later
             ook mee aan de slag gaan in de bedrijfswereld, maar eerst ben ik van
-            plan om nog een graduaat <span>Programmeren</span> te volgen zodat
-            ik het totaalpakket front-end <span>en</span> back-end beheers.
-            Momenteel beheers ik qua coding de talen:
-            <span>HTML, CSS, JavaScript en PHP</span>. Van React JS en React
-            Native heb ik de basis meegekregen maar besef ik dat ik nog zeer
-            veel moet bijleren.
+            plan om nog een graduaat Programmeren te volgen zodat ik het
+            totaalpakket <span>front-end</span> en
+            <span>back-end</span> beheers. Momenteel beheers ik qua coding de
+            talen: <span>HTML, CSS, JavaScript en PHP</span>. Van React JS en
+            React Native heb ik de basis meegekregen maar besef ik dat ik nog
+            zeer veel moet bijleren.
           </p>
           <div id="download">
             <div class="wrapper">
@@ -62,46 +62,14 @@
         </div>
       </div>
       <div id="portfolio">
-        <div>
+        <div id="divTitel">
           <p id="titeltje">Mijn portfolio</p>
         </div>
         <div id="portfolioItems">
           <div id="item">
-            <img class="expandable" src="./img/countdown-mockup.jpg" />
+            <img class="expandable" src="./img/sheetly-mockup.jpg" />
             <div class="middle">
-              <div><p>countdown site</p></div>
-            </div>
-          </div>
-          <div id="overlay" class="hidden">
-            <img id="expanded-image" />
-            <div id="close-button">X</div>
-          </div>
-          <div id="item">
-            <img class="expandable" src="./img/logo-mockup.jpg" />
-            <div class="middle">
-              <div><p>logo advocatenbureau</p></div>
-            </div>
-          </div>
-          <div id="item">
-            <a href="https://youtu.be/Gi539pJL3bc" target="_blank">
-              <img class="noexpandable" src="./img/mars-mockup.jpg"
-            /></a>
-            <div class="middle">
-              <div><p>muziekvisualisatie</p></div>
-            </div>
-          </div>
-          <div id="item">
-            <a href="https://youtu.be/6gErYwqRP-0" target="_blank"
-              ><img class="noexpandable" src="./img/video-mockup.jpg"
-            /></a>
-            <div class="middle">
-              <div><p>kerstvideo Duvel</p></div>
-            </div>
-          </div>
-          <div id="item">
-            <img class="expandable" src="./img/weatherapp-mockup.jpg" />
-            <div class="middle">
-              <div><p>weer site</p></div>
+              <div><p>music sheets library</p></div>
             </div>
           </div>
           <div id="item">
@@ -112,19 +80,53 @@
               <div><p>accordeon video</p></div>
             </div>
           </div>
-          <div id="item">
-            <img class="expandable" src="./img/sheetly-mockup.jpg" />
+          <div class="hidden-image" id="item">
+            <img class="expandable" src="./img/countdown-mockup.jpg" />
             <div class="middle">
-              <div><p>music sheets library</p></div>
+              <div><p>countdown site</p></div>
             </div>
           </div>
-          <div id="item">
+          <div id="overlay" class="hidden">
+            <img id="expanded-image" />
+            <div id="close-button">X</div>
+          </div>
+          <div class="hidden-image" id="item">
+            <img class="expandable" src="./img/logo-mockup.jpg" />
+            <div class="middle">
+              <div><p>logo advocatenbureau</p></div>
+            </div>
+          </div>
+          <div class="hidden-image" id="item">
+            <a href="https://youtu.be/Gi539pJL3bc" target="_blank">
+              <img class="noexpandable" src="./img/mars-mockup.jpg"
+            /></a>
+            <div class="middle">
+              <div><p>muziekvisualisatie</p></div>
+            </div>
+          </div>
+          <div class="hidden-image" id="item">
+            <a href="https://youtu.be/6gErYwqRP-0" target="_blank"
+              ><img class="noexpandable" src="./img/video-mockup.jpg"
+            /></a>
+            <div class="middle">
+              <div><p>kerstvideo Duvel</p></div>
+            </div>
+          </div>
+          <div class="hidden-image" id="item">
+            <img class="expandable" src="./img/weatherapp-mockup.jpg" />
+            <div class="middle">
+              <div><p>weer site</p></div>
+            </div>
+          </div>
+
+          <div class="hidden-image" id="item">
             <img class="expandable" src="./img/brochure-mockup.jpg" />
             <div class="middle">
               <div><p>brochure over brood</p></div>
             </div>
           </div>
         </div>
+        <button id="showAll">Show all</button>
       </div>
       <div id="contact">
         <div id="titeltje">
@@ -208,4 +210,5 @@
   <script defer src="./scripts/images.js"></script>
   <script defer src="./scripts/portfolioanimate.js"></script>
   <script defer src="./scripts/header.js"></script>
+  <script defer src="./scripts/hidePortfolio.js"></script>
 </html>
