@@ -1,29 +1,44 @@
 @import "variables.css";
 
 body {
-  background-color: #f1f1f5;
+  /*background-color: #f1f1f5;*/
+  background-color: white;
   margin: 0;
   font-family: var(--textFont);
 }
 main {
   text-align: center;
-  padding: 100px;
+  padding: 0px 100px;
+  margin: 70px 0;
 }
 /*bio*/
 main #bio div img {
-  width: 20rem;
+  width: 20vw;
   margin: auto;
 }
-main #bio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+main #bio div {
+  margin: 10px auto;
 }
 main #bio div:nth-child(1) {
-  width: 40%;
+  float: left;
+  margin: 10px 0;
 }
-main #bio #uitleg {
-  width: 60%;
+main #bio div:nth-child(2) {
+  float: right;
+  width: 60vw;
+  margin: 10px 0;
+}
+#uitleg p span {
+  color: var(--color4);
+}
+#bio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 50px 0;
+}
+#bio #uitleg {
   align-items: center;
   display: flex;
 }
@@ -31,24 +46,177 @@ main #bio p {
   text-align: left;
   line-height: 2rem;
   font-size: var(--textSize);
+  color: var(--color1);
 }
+
 /*einde bio*/
+/*portfolio*/
+#portfolio {
+  margin: 0 0 50px 0;
+}
+#portfolio div {
+  margin: 10px auto;
+  text-align: left;
+}
+#portfolio div:nth-child(1) p {
+  font-size: 2rem;
+  color: var(--color4);
+}
+#portfolioItems {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--standaardMarge);
+  justify-content: space-between;
+}
+
+.expandable {
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 600px;
+  transition: all 0.3s ease-in-out;
+  width: 400px;
+  margin: 10px 0 10px 0;
+  height: auto;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#overlay.hidden {
+  display: none;
+}
+
+#expanded-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+#close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*einde portfolio*/
 /*contact*/
-main #contact {
+main #contact #title {
+  font-size: 2rem;
+  text-align: left;
+  color: var(--color4);
+}
+main #contact #title,
+main #contact #contactItems {
+  margin: 10px auto;
+}
+#contact #contactItems p,
+#contact #contactItems #gegevens a {
+  color: var(--color1);
+}
+main #contactItems {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: var(--textSize);
   margin-top: var(--standaardMarge);
+  line-height: 2rem;
+  font-size: var(--textSize);
 }
-main #contact div {
-  width: 50%;
+#contactTekst {
+  width: 50vw;
+  padding-right: 5%;
 }
-main #gegevens {
+main #contactItems div {
+  text-align: left;
+}
+#gegevens {
+  width: 50vw;
   text-align: left;
 }
 #gegevens div {
   margin: auto;
   margin: auto auto var(--standaardMarge) auto;
 }
+#gegevens div span {
+  cursor: pointer;
+  margin-right: 10px;
+}
+#gegevens div span i:hover {
+  transform: translateY(-5px);
+  transition-duration: 0.5s;
+  color: var(--color1);
+}
+#gegevens div span i {
+  color: var(--color4);
+}
+#gegevens div span i svg {
+  fill: var(--color4);
+}
+
+#gegevens div span i svg:hover {
+  transform: translateY(-5px);
+  transition-duration: 0.5s;
+  fill: var(--color1);
+}
+/*TODO kleur icoontjes aanpassen naar kleur site*/
 /*einde contact*/
+
+@media (max-width: 550px) {
+  main #bio div img {
+    width: 220px;
+    margin: auto;
+  }
+  main {
+    text-align: center;
+    padding: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  main #contactItems {
+    flex-direction: column;
+  }
+  #gegevens,
+  #contactTekst {
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
+  main #bio div img {
+    width: 250px;
+    margin: auto;
+  }
+  main #bio div {
+    margin: 10px auto;
+  }
+  main #bio div:nth-child(1) {
+    margin: 10px auto;
+  }
+  main #bio div:nth-child(2) {
+    width: 100vw;
+    margin: 10px auto;
+  }
+  main {
+    padding: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
