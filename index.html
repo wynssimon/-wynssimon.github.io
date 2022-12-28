@@ -14,6 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <title>Simon Wyns</title>
+    <!--TODO CV opnieuw maken met hele nieuwe styling en kleuren en deze toevoegen in de map van de site-->
   </head>
   <body>
     <header>
@@ -26,11 +27,14 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
+
     <main>
       <div id="bio">
         <div>
-          <img src="./img/simon.png" />
+          <img id="myImage" src="./img/simon.png" />
+          <img id="myImage2" src="./img/simon2.png" />
         </div>
+
         <div id="uitleg">
           <p>
             Ik ben Simon Wyns, 20 jaar, en ik studeer
@@ -43,49 +47,100 @@
             kunde op vlak van video, photoshop, illustrator, ... In mijn vrije
             tijd speel ik accordeon en maak ik er YouTube video's mee. Ook hou
             ik heel veel van sporten, van voetbal tot wielrennen tot lopen.<br />
-            <button>Download cv</button>
           </p>
+          <div id="download">
+            <div class="wrapper">
+              <a href="./curriculum-vitae.pdf" download
+                ><span>Download cv</span></a
+              >
+            </div>
+          </div>
         </div>
       </div>
       <div id="portfolio">
         <div>
-          <p>Mijn portfolio</p>
+          <p id="titeltje">Mijn portfolio</p>
         </div>
         <div id="portfolioItems">
-          <img class="expandable" src="./img/countdown-mockup.jpg" />
+          <div id="item">
+            <img class="expandable" src="./img/countdown-mockup.jpg" />
+            <div class="middle">
+              <div><p>countdown site</p></div>
+            </div>
+          </div>
           <div id="overlay" class="hidden">
             <img id="expanded-image" />
             <div id="close-button">X</div>
           </div>
-          <img class="expandable" src="./img/logo-mockup.jpg" />
-          <img class="expandable" src="./img/mars-mockup.jpg" />
-          <img class="expandable" src="./img/video-mockup.jpg" />
-          <img class="expandable" src="./img/weatherapp-mockup.jpg" />
-          <img class="expandable" src="./img/yt-mockup.jpg" />
-          <img class="expandable" src="./img/sheetly-mockup.jpg" />
-          <img class="expandable" src="./img/brochure-mockup.jpg" />
-          <!-- TODO degene waarvan video online staat link plaatsen naar de video ipv expandable image-->
+          <div id="item">
+            <img class="expandable" src="./img/logo-mockup.jpg" />
+            <div class="middle">
+              <div><p>logo advocatenbureau</p></div>
+            </div>
+          </div>
+          <div id="item">
+            <a href="https://youtu.be/Gi539pJL3bc" target="_blank">
+              <img class="noexpandable" src="./img/mars-mockup.jpg"
+            /></a>
+            <div class="middle">
+              <div><p>muziekvisualisatie</p></div>
+            </div>
+          </div>
+          <div id="item">
+            <a href="https://youtu.be/6gErYwqRP-0" target="_blank"
+              ><img class="noexpandable" src="./img/video-mockup.jpg"
+            /></a>
+            <div class="middle">
+              <div><p>kerstvideo Duvel</p></div>
+            </div>
+          </div>
+          <div id="item">
+            <img class="expandable" src="./img/weatherapp-mockup.jpg" />
+            <div class="middle">
+              <div><p>weer site</p></div>
+            </div>
+          </div>
+          <div id="item">
+            <a href="https://youtu.be/6Fe-uwcVvVo" target="_blank"
+              ><img class="noexpandable" src="./img/yt-mockup.jpg"
+            /></a>
+            <div class="middle">
+              <div><p>accordeon video</p></div>
+            </div>
+          </div>
+          <div id="item">
+            <img class="expandable" src="./img/sheetly-mockup.jpg" />
+            <div class="middle">
+              <div><p>music sheets library</p></div>
+            </div>
+          </div>
+          <div id="item">
+            <img class="expandable" src="./img/brochure-mockup.jpg" />
+            <div class="middle">
+              <div><p>brochure over brood</p></div>
+            </div>
+          </div>
         </div>
       </div>
       <div id="contact">
-        <div id="title">
+        <div id="titeltje">
           <p>Contacteer mij</p>
         </div>
         <div id="contactItems">
           <div id="contactTekst">
             <p>
-              Aarzel niet om mij te contacteren indien u een zakelijke of
-              persoonlijke vraag heeft.
+              Indien u een zakelijke of persoonlijke vraag heeft, aarzel dan
+              niet om mij te contacteren via email, bericht of sociale media.
             </p>
           </div>
           <div id="gegevens">
             <div>
               <span><i class="fa fa-envelope"></i></span>
-              <a>wynssimonw@gmail.com</a>
+              <a href="mailto:wynssimonw@gmail.com">wynssimonw@gmail.com</a>
             </div>
             <div>
               <span><i class="fa fa-phone"></i></span>
-              <a>04/93.12.07.97</a>
+              <a href="tel:04/93.12.07.97">04/93.12.07.97</a>
             </div>
             <div>
               <span
@@ -99,7 +154,11 @@
                       d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
                     /></svg></i
               ></span>
-              <a>Langestraat 42, 2930 Brasschaat</a>
+              <a
+                href="https://www.google.com/maps/place/Langestraat+42,+2930+Brasschaat/@51.3059096,4.4770945,17z/data=!3m1!4b1!4m5!3m4!1s0x47c408804db1d865:0xe4dddd9ac3ba2f52!8m2!3d51.3059063!4d4.4792832"
+                target="_blank"
+                >Langestraat 42, 2930 Brasschaat</a
+              >
             </div>
           </div>
         </div>
@@ -143,4 +202,5 @@
     </footer>
   </body>
   <script defer src="./scripts/images.js"></script>
+  <script defer src="./scripts/header.js"></script>
 </html>

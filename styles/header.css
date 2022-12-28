@@ -4,26 +4,23 @@ header {
   display: flex;
   background-color: var(--color3);
   flex-direction: row;
-  padding: 0px 100px;
-  min-height: 10vh;
-  border-bottom: 1px solid lightgrey;
+  padding: 0px 120px;
+  height: 12vh;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  position: relative;
+  position: fixed;
   font-family: var(--titleFont);
+  top: 0;
+  z-index: 10;
 }
-@media (max-width: 550px) {
-  header {
-    padding: 0px 30px;
-  }
-}
+
 header div {
   float: left;
 }
 header div a {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--color1);
 }
 
@@ -33,12 +30,32 @@ header ul {
   float: right;
 }
 header ul li {
-  margin: 0 var(--standaardMarge) 0 0;
+  margin: 0 50px 0 0;
 }
 header ul li a {
   text-decoration: none;
   color: var(--color4);
+  font-size: 1.5rem;
 }
 header ul li a:hover {
   text-decoration: underline;
+}
+@media (max-width: 550px) {
+  header {
+    padding: 0px 30px;
+  }
+  header ul {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  header ul {
+    display: none;
+  }
+  header {
+    padding: 0px 30px;
+  }
+  header div {
+    margin: auto;
+  }
 }

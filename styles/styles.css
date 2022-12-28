@@ -6,10 +6,14 @@ body {
   margin: 0;
   font-family: var(--textFont);
 }
+::selection {
+  color: var(--color3);
+  background-color: var(--color2);
+}
 main {
   text-align: center;
-  padding: 0px 100px;
-  margin: 70px 0;
+  padding: 0px 120px;
+  margin: 150px 0;
 }
 /*bio*/
 main #bio div img {
@@ -31,17 +35,107 @@ main #bio div:nth-child(2) {
 #uitleg p span {
   color: var(--color4);
 }
+#myImage {
+  position: absolute;
+  opacity: 1;
+  animation: image 20s infinite;
+}
+@keyframes image {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#myImage2 {
+  opacity: 0;
+  animation: image2 20s infinite;
+}
+@keyframes image2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 #bio {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 0 50px 0;
+  align-items: center;
 }
 #bio #uitleg {
   align-items: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
+#uitleg #download {
+  margin-left: 0;
+  width: 100%;
+  align-items: ;
+}
+.wrapper {
+  position: relative;
+  width: 200px;
+  grid-column-end: 3;
+  grid-column-start: 1;
+  margin-left: 5%;
+}
+
+.wrapper a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: var(--color2);
+  border: 1px solid var(--color2);
+  border-radius: 4px;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: all 1.35s;
+  margin: auto;
+}
+
+.wrapper a span {
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color2);
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.wrapper:hover > a span {
+  color: var(--color3);
+}
+
+.wrapper a:hover:after {
+  width: 204px;
+}
+
 main #bio p {
   text-align: left;
   line-height: 2rem;
@@ -58,9 +152,10 @@ main #bio p {
   margin: 10px auto;
   text-align: left;
 }
-#portfolio div:nth-child(1) p {
+#titeltje {
   font-size: 2rem;
   color: var(--color4);
+  text-align: left;
 }
 #portfolioItems {
   display: flex;
@@ -68,15 +163,47 @@ main #bio p {
   margin-top: var(--standaardMarge);
   justify-content: space-between;
 }
-
+#item img {
+  width: 400px;
+}
+#portfolioItems #item {
+  margin: 10px 0 10px 0;
+  max-width: 100%;
+  max-height: 600px;
+  height: auto;
+}
+.middle {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.middle div p {
+  font-family: var(--textFont);
+  color: var(--color1);
+}
+#item:hover .middle {
+  opacity: 1;
+}
+#item:hover .middle {
+  display: block;
+}
 .expandable {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.noexpandable {
   cursor: pointer;
   max-width: 100%;
   max-height: 600px;
-  transition: all 0.3s ease-in-out;
   width: 400px;
-  margin: 10px 0 10px 0;
+  margin: 0px 0 0px 0;
   height: auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+  box-shadow: 5px black;
 }
 
 #overlay {
@@ -119,11 +246,6 @@ main #bio p {
 
 /*einde portfolio*/
 /*contact*/
-main #contact #title {
-  font-size: 2rem;
-  text-align: left;
-  color: var(--color4);
-}
 main #contact #title,
 main #contact #contactItems {
   margin: 10px auto;
@@ -152,6 +274,13 @@ main #contactItems div {
   width: 50vw;
   text-align: left;
 }
+#gegevens a {
+  text-decoration: none;
+}
+#gegevens div a:hover {
+  color: red;
+  text-decoration: underline;
+}
 #gegevens div {
   margin: auto;
   margin: auto auto var(--standaardMarge) auto;
@@ -177,7 +306,6 @@ main #contactItems div {
   transition-duration: 0.5s;
   fill: var(--color1);
 }
-/*TODO kleur icoontjes aanpassen naar kleur site*/
 /*einde contact*/
 
 @media (max-width: 550px) {
@@ -216,7 +344,7 @@ main #contactItems div {
   }
   main {
     padding: 30px;
-    margin-top: 0;
+    margin-top: 100px;
     margin-bottom: 20px;
   }
 }
