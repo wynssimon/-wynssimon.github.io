@@ -1,9 +1,8 @@
-window.onload = () => {
+function function2() {
   const header = document.querySelector("header");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-      console.log("heeeeeeeey");
       header.style.height = "60px";
       header.style.transitionDuration = "1s";
     } else {
@@ -11,4 +10,4 @@ window.onload = () => {
       header.style.transitionDuration = "1s";
     }
   });
-};
+}

@@ -11,8 +11,11 @@ footer {
   margin: 0 auto;
   font-family: var(--titleFont);
   line-height: 2rem;
+  color: var(--color1);
 }
-
+footer div:nth-child(2) {
+  text-transform: uppercase;
+}
 footer ul li i {
   cursor: pointer;
 }
@@ -40,5 +43,10 @@ footer ul li span {
   }
   footer div:nth-child(2) {
     display: none;
+  }
+}
+@media (max-width: 960px) {
+  footer {
+    padding: 20px 30px;
   }
 }

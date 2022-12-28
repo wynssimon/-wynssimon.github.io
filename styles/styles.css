@@ -162,6 +162,8 @@ main #bio p {
   flex-wrap: wrap;
   margin-top: var(--standaardMarge);
   justify-content: space-between;
+  position: relative;
+  top: 50px;
 }
 #item img {
   width: 400px;
@@ -172,6 +174,7 @@ main #bio p {
   max-height: 600px;
   height: auto;
 }
+
 .middle {
   transition: all 0.3s ease-in-out;
   opacity: 0;
@@ -182,10 +185,10 @@ main #bio p {
 }
 #item:hover .middle {
   opacity: 1;
-}
-#item:hover .middle {
   display: block;
+  transition-duration: 1s;
 }
+
 .expandable {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -326,6 +329,9 @@ main #contactItems div {
   #contactTekst {
     width: 100%;
   }
+  #portfolioItems {
+    justify-content: space-between;
+  }
 }
 @media (max-width: 960px) {
   main #bio div img {
@@ -346,5 +352,13 @@ main #contactItems div {
     padding: 30px;
     margin-top: 100px;
     margin-bottom: 20px;
+  }
+  #portfolioItems {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 1100px) {
+  #portfolioItems img {
+    width: 350px;
   }
 }
