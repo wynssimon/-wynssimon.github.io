@@ -164,7 +164,7 @@ main #bio p {
   display: flex;
   flex-wrap: wrap;
   margin-top: var(--standaardMarge);
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   top: 50px;
 }
@@ -172,7 +172,7 @@ main #bio p {
   width: 400px;
 }
 #portfolioItems #item {
-  margin: 10px 0px 10px 0;
+  margin: 10px 40px 10px 0;
   max-width: 100%;
   max-height: 600px;
   height: auto;
@@ -358,7 +358,7 @@ main #contactItems div {
     margin-bottom: 20px;
   }
   #portfolioItems {
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 @media (max-width: 1100px) {
@@ -366,7 +366,7 @@ main #contactItems div {
     width: 350px;
   }
   #portfolioItems {
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 @media (max-width: 600px) {
